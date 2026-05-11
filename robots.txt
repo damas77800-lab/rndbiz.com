@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Search engines
+Sitemap: https://analyze.rndbiz.kr/sitemap.xml
+
+# Naver
+User-agent: Yeti
+Allow: /
+
+# Daum
+User-agent: Daumoa
+Allow: /
