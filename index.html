@@ -1285,7 +1285,7 @@
    CONFIG — Apps Script endpoint (set in admin panel)
    ============================================================ */
 const APPS_KEY = "rndbiz_apps_url_v1";
-
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz.../exec";
 /* ============================================================
    DATA — funds, common conditions, innovation fields, priority
    ============================================================ */
@@ -1923,7 +1923,7 @@ function saveLeads(){ localStorage.setItem(STORE_KEY, JSON.stringify(state.leads
    APPS SCRIPT INTEGRATION
    ============================================================ */
 async function sendToAppsScript(lead){
-  const url = localStorage.getItem(APPS_KEY) || "";
+  const url = localStorage.getItem(APPS_KEY) || APPS_SCRIPT_URL;
   if(!url) return;
   try {
     // no-cors to avoid CORS preflight; Apps Script will receive POST
